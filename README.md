@@ -79,6 +79,18 @@ You can then access petclinic here: http://localhost:8080/
 
 Our issue tracker is available here: https://github.com/spring-petclinic/spring-petclinic-microservices/issues
 
+
+## Performance "problems"
+This extension includes some very simple performance problems on purpose to visualize how APM tools can
+detect these and show them to the user.
+
+- Creating a new pet with the type Snake will impose a 2s delay.
+- Finding a customer with a customer ID that can be divided by 11 will impose a 1s delay.
+- Loading the visits will impose 2s delay with a probability of 10 percent.
+
+## Intellij setup
+
+- Please make sure to install the Lombok Plugin
 ## Database configuration
 
 In its default configuration, Petclinic uses an in-memory database (HSQLDB) which
