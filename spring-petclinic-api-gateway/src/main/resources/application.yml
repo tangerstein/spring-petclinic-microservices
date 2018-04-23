@@ -10,6 +10,5 @@ hystrix:
   command:
     default:
       execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds=5000
+        timeout:
+          enabled: false
