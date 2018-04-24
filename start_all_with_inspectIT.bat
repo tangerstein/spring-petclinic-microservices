@@ -8,7 +8,7 @@ rem !!!!do not use spaces in the path of inspectIT installation folder!!!!
 set AGENTDIR=%1
 set WAITTIME=5
 set /a "x = 0"
-
+set PATH=%PATH%;C:\windows\system32;
 rem STARTTYPE, z.B. /B = start without open a new windows, /MIN start minized in new windows
 set STARTTYPE=/B
 
