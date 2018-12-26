@@ -32,11 +32,10 @@
 
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
-        <sleuth.version>2.0.0.RC2</sleuth.version>
 
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
 
-        <docker.image.prefix>mszarlinski</docker.image.prefix>
+        <docker.image.prefix>openapm</docker.image.prefix>
         <docker.image.exposed.port>9090</docker.image.exposed.port>
         <docker.image.dockerfile.dir>${basedir}</docker.image.dockerfile.dir>
         <docker.image.dockerize.version>v0.6.1</docker.image.dockerize.version>
@@ -45,13 +44,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-sleuth-dependencies</artifactId>
-                <type>pom</type>
-                <scope>import</scope>
-                <version>${sleuth.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -172,6 +164,9 @@
                                     <EXPOSED_PORT>${docker.image.exposed.port}</EXPOSED_PORT>
                                     <DOCKERIZE_VERSION>${docker.image.dockerize.version}</DOCKERIZE_VERSION>
                                 </buildArgs>
+                                <imageTags>
+                                    <imageTag>inspectit-oce-demo</imageTag>
+                                </imageTags>
                             </configuration>
                         </plugin>
                     </plugins>
